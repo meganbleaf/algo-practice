@@ -17,24 +17,6 @@
 // }
 
 
-// function palindrome(str) {
-//     let reversed = ''
-//     for (let character of str) {
-//         reversed = character + reversed
-//         console.log(reversed)
-//     }
-//     console.log('outside of loop', reversed)
-//     if (str === reversed) {
-//         console.log("str", str)
-//         console.log("reversed", reversed)
-//         return true
-//     } else {
-//         return false
-//     }
-// }
-
-
-
 function palindrome(str) {
     for (let character of str) {
         reversed = character + reversed
