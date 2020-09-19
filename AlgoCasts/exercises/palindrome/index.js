@@ -17,15 +17,27 @@
 // }
 
 
+// function palindrome(str) {
+//     for (let character of str) {
+//         reversed = character + reversed
+//     }
+//     if (str === reversed) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
 function palindrome(str) {
-    for (let character of str) {
-        reversed = character + reversed
+    let endChars = str.length - 1
+    for (let i = 0; i <= str.length / 2; i++) {
+        if (str[i] === str[endChars - i]) {
+            continue
+        } else {
+            return false
+        }
     }
-    if (str === reversed) {
-        return true
-    } else {
-        return false
-    }
+    return true
 }
 
 module.exports = palindrome;
