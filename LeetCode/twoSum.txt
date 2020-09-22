@@ -19,3 +19,8 @@ Example 3:
 
 Input: nums = [3,3], target = 6
 Output: [0,1]
+
+NOTE FROM MEGAN: seems like there must be a solution, so no need for edge cases
+if there were edge cases I'd ask what was expected to be returned if no two numbers added to equal
+each other. Or if the array only had 1 number in it or was empty. Also would ask to clarify if there
+are any negative numbers

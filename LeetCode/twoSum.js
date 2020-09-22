@@ -17,4 +17,4 @@ const twoSum = (array, targetNum) => {
 
 //the run time of this problem would be O(n^2) since the 
 //nested for loop requires going through the array at the
-//absolute maximum n * n times.
+//absolute maximum n * n times
