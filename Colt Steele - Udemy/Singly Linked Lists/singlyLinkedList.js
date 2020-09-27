@@ -124,6 +124,34 @@ class SinglyLinkedList {
         //return true
 
     }
+    remove(index) {
+        if (index < 0 || index > this.length) return undefined
+        if (index === 0) return this.shift()
+        if (index === this.length - 1) return this.pop()
+        let oneBefore = this.get(index - 1)
+        let removed = oneBefore.next //to be deleted
+        oneBefore.next = temp.next
+        this.length--
+        return removed
+    }
+    reverse() {
+        if (!this.head) return undefined
+        if (this.length === 1) return this
+        let prev = null
+        let next = null
+        let count = 0
+        let current = this.head
+        this.head = this.tail
+        while (count < this.length - 1) {
+            count++
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        }
+        return this
+    }
+
 }
 
 let list = new SinglyLinkedList
