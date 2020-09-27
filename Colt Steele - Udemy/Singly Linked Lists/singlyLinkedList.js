@@ -79,6 +79,51 @@ class SinglyLinkedList {
         this.length++
         return this
     }
+
+    get(index) {
+        let count = 0
+        let current = this.head
+        if (index < 0 || index >= this.length) {
+            return null
+        } else {
+            while (count !== index) {
+                current = this.head.next
+                count++
+            }
+        }
+        return current
+        //negative or greater than equal to the length of the list return null
+        //loop through list until you reach the index
+    }
+
+    set(value, index) {
+        let changeVal = get(index)
+        if (!changeVal) return false
+        changeVal.val = value
+        return true
+    }
+
+    insert(value, index) {
+        let newNode = new Node(value)
+        if (index < 0 || index > this.length) return false
+        if (index === 0) return !!this.unshift(value)
+        if (index === this.length) return !!this.push(value)
+        let oneBefore = this.get(index - 1)
+        let temp = oneBefore.next
+        newNode.next = temp
+        oneBefore.next = newNode
+        this.length++
+        return true
+        //if the index is less than 0 or greater than length return false
+        //if index is same as length, push new to end of list
+        //if index is 0 unshift to start
+        //otherwise, use get method, figure out node before index (index -1)
+        //set next property on that node to be new node
+        //set next property on new node to be the previous next
+        //increment length
+        //return true
+
+    }
 }
 
 let list = new SinglyLinkedList
