@@ -24,7 +24,7 @@ Input: [4,9,0,5,1]
    / \
   9   0
  / \
-5   1
+5   1 
 Output: 1026
 Explanation:
 The root-to-leaf path 4->9->5 represents the number 495.
