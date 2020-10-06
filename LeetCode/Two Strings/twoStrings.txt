@@ -1,0 +1,10 @@
+Given two arrays of strings, determine whether corresponding elements contain a common 
+substring. For example, if array a = [ab, cd, ef] and array b = [af, ee, ef] we make the following
+decisions:
+i a[i]   b[i]     common   result
+0  ab      af       a        yes
+1  cd      ee                no
+2  ef      ef       ef       yes
+
+For each test, print your result on a new line, either YES if there is a common substring, or NO
+
